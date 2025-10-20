@@ -1,0 +1,117 @@
+.members-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background:
+    linear-gradient(180deg, #05060a 0%, #030306 60%),
+    radial-gradient(900px 600px at 80% -30%, rgba(255, 90, 0, 0.12), transparent 70%);
+}
+
+.members-card {
+  width: min(440px, 100%);
+  background: linear-gradient(180deg, rgba(7, 9, 14, 0.94), rgba(3, 3, 6, 0.96));
+  border-radius: 18px;
+  border: 1px solid rgba(27, 34, 48, 0.9);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #f2f5f8;
+}
+
+.members-card h1 {
+  margin: 0;
+  font-family: "Eurostile", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.members-card .lead {
+  color: #9aa3ad;
+  margin: 0;
+}
+
+.gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gate-form label {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.gate-form input {
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(27, 34, 48, 0.9);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f2f5f8;
+  font-size: 1rem;
+}
+
+.gate-form input:focus {
+  outline: 2px solid #ff5a00;
+  outline-offset: 2px;
+}
+
+.gate-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(27, 34, 48, 0.9);
+  background: rgba(255, 90, 0, 0.2);
+  color: #f2f5f8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gate-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255, 90, 0, 0.25);
+}
+
+.gate-form button[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+  transform: none;
+  box-shadow: none;
+}
+
+.status {
+  min-height: 1.4em;
+  color: #9aa3ad;
+}
+
+.status[data-state="error"] {
+  color: #ff8080;
+}
+
+.members-card .hint {
+  color: #9aa3ad;
+  font-size: 0.95rem;
+}
+
+.members-card a {
+  color: #9aa3ad;
+  text-decoration: none;
+}
+
+.members-card a:hover {
+  color: #f2f5f8;
+}
+
+@media (max-width: 640px) {
+  .members-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
