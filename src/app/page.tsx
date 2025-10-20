@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
-import { LandingPage } from "@/components/marketing/LandingPage";
-
-export const metadata: Metadata = {
-  title: "Open People",
-  description: "Structure before power. Humanity before machine. Alignment before acceleration.",
-};
-
-export default function HomePage() {
-  return <LandingPage />;
+export default function Home(){
+  return (
+    <main style={{padding:20}}>
+      <h1>Open People Dash</h1>
+      <p><a href="/dash">Go to /dash</a></p>
+    </main>
+  );
 }
